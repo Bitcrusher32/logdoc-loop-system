@@ -162,6 +162,7 @@ The human remains responsible for deciding what to run, what to trust, what to p
 README.md
 SPEC.md
 LOGDOC_TEMPLATE.md
+case-studies/*
 LICENSE
 
 Future versions may add reusable templates, examples, scripts, or project-specific variants.
