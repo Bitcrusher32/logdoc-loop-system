@@ -84,7 +84,7 @@ Examples:
  - known device state
  - known unsafe action
 
-Definitive knowns should be explicit, not implied, and should be project-context dependant.
+Definitive knowns should be explicit, not implied, and should be project-context dependent.
 
 
 ### 4.4 Scope
@@ -235,7 +235,7 @@ Must include:
  - current phase
  - immediate next step
  - expected result
- - versioning data (project and implimentation dependant)
+ - versioning data (project and implimentation dependent)
  - follow-up if it succeeds
 
 
@@ -268,7 +268,7 @@ Should occur while the project is at a neutral state, or at a milestone achiveme
 
 
 ### 5.11 Notes for Future Assistant / Future Operator
-Must include context restoration instructions and the project's last-state and last-neutral working state dependant information.
+Must include context restoration instructions and the project's last-state and last-neutral working state dependent information.
 
 
 ---
@@ -287,13 +287,13 @@ Meaningful state changes include:
  - a validation failure
  - a risk boundary change
  - a handoff point
- - a stop/pause/branch decision (berakpoint)
+ - a stop/pause/branch decision (breakpoint)
 
 The cadence is flexible. The purpose is continuity, not paperwork.
 
 
 ## 7. Classification of results
-Each major result across all check, hygine, breakpint, and worklfow fields should be classified.
+Each major result across all check, hygine, breakpint, and workflow fields should be classified.
 Recommended classifications:
 
  - VALIDATED
@@ -386,8 +386,8 @@ Unless those claims are actually proven.
 ### 9.1: LogDoc Hygiene Practices
 - Perform manual or git-based stale wording scans 
 - Generate artifact "sanity check" scans for local environment sanity checking pre-push 
-- Move obsolete artifacts (scripts, documentation, etc) into a centralized git directory (Reccomended:/docs/obsolete/* )
-- Use sanity scripts and hygeine practices alongside LogDoc breakpoints, milestones, and updates
+- Move obsolete artifacts (scripts, documentation, etc) into a centralized git directory (Recommended: /docs/obsolete/*)
+- Use sanity scripts and hygiene practices alongside LogDoc breakpoints, milestones, and updates
 
 ---
 
