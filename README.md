@@ -170,9 +170,9 @@ Future versions may add reusable templates, examples, scripts, or project-specif
 
 
 ---
-##Recommended usage
+## Recommended usage
 
-###Use LogDoc Loop when a project has at least one of the following:
+### Use LogDoc Loop when a project has at least one of the following:
 
  - many uncertain steps
  - long debugging sessions
@@ -185,7 +185,7 @@ Future versions may add reusable templates, examples, scripts, or project-specif
  - publication intent
  - handoff between sessions or people
 
-###LogDoc is especially useful for:
+### LogDoc is especially useful for:
 
  - toolchain recovery
  - reverse engineering
@@ -199,7 +199,12 @@ Future versions may add reusable templates, examples, scripts, or project-specif
  - risky migrations
  - Status
 
+Avoid using LogDoc (if not specifically retooled) for:
 
+ - Small, low-risk projects
+ - Corporate projects with alternative DevOps and logging management
+ - Purely agentic, not human-in-loop iteration workflows
+ 
 ---
 ##Current standard status:
 
