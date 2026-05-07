@@ -159,7 +159,6 @@ The human remains responsible for deciding what to run, what to trust, what to p
 
 ## Included files
 
-```text
 README.md
 SPEC.md
 LOGDOC_TEMPLATE.md
@@ -167,11 +166,11 @@ BREAKPOINTS.md
 CASE_STUDY.md
 LICENSE
 
-
 Future versions may add reusable templates, examples, scripts, or project-specific variants.
 
-##Recommended usage
 
+---
+##Recommended usage
 
 ###Use LogDoc Loop when a project has at least one of the following:
 
@@ -201,6 +200,7 @@ Future versions may add reusable templates, examples, scripts, or project-specif
  - Status
 
 
+---
 ##Current standard status:
 
 LogDoc Loop v0.1
