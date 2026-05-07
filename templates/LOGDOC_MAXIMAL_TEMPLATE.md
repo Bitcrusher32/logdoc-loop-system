@@ -1,3 +1,9 @@
+
+# LogDoc Loop — Maximnal Template
+
+A human-in-the-loop AI-assisted engineering protocol. This is a  LogDoc template designed to cover all bases, to be customized before use. Using as-is may create increased documentation verbosity at the expense of bureaucratic friction.
+
+---
 # [Project Name] LogDoc [Version]
 
 Last updated: YYYY-MM-DD HH:MM  
