@@ -152,12 +152,12 @@ The latest accurate summary of the project.
 
 Current State should separate:
 
-validated facts
-partial results
-failures
-blockers
-unknowns
-next actions
+- validated facts
+- partial results
+- failures
+- blockers
+- unknowns
+- next actions
 
 
 ### 4.10 Assistant Notes
