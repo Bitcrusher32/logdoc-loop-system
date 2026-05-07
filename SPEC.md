@@ -383,6 +383,11 @@ Avoid:
 
 Unless those claims are actually proven.
 
+### 9.1: LogDoc Hygiene Practices
+- Perform manual or git-based stale wording scans 
+- Generate artifact "sanity check" scans for local environment sanity checking pre-push 
+- Move obsolete artifacts (scripts, documentation, etc) into a centralized git directory (Reccomended:/docs/obsolete/* )
+- Use sanity scripts and hygeine practices alongside LogDoc breakpoints, milestones, and updates
 
 ---
 
