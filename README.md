@@ -10,7 +10,7 @@ The goal is simple:
 
 LogDoc Loop turns messy technical iteration into a reusable project memory layer.
 
-Athor: Udaiveer Singh Bhangu (bitcrusher32)
+Author: Udaiveer Singh Bhangu (bitcrusher32)
 
 ---
 
