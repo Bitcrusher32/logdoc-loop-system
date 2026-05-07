@@ -264,7 +264,7 @@ The ladder should prevent overclaiming.
 
 ### 5.10 Breakpoints
 Must preserve handoff snapshots, with a LogDoc versioning update (v1.12 -> v1.13)
-Should occur while the project is at a neutral state, or at a milestone achivement 
+Should occur while the project is at a neutral state, or at a milestone achievement 
 
 
 ### 5.11 Notes for Future Assistant / Future Operator
@@ -293,7 +293,7 @@ The cadence is flexible. The purpose is continuity, not paperwork.
 
 
 ## 7. Classification of results
-Each major result across all check, hygine, breakpint, and workflow fields should be classified.
+Each major result across all check, hygine, breakpoint, and workflow fields should be classified.
 Recommended classifications:
 
  - VALIDATED
@@ -304,10 +304,13 @@ Recommended classifications:
  - UNSAFE
  - UNKNOWN
  - SUPERSEDED
- - VALIDATED
 
 ### 7.1 Classification definitions
 The result has been tested enough to rely on for the current phase.
+
+VALIDATED
+
+> The result has been tested, matching the full claim
 
 PARTIAL
 
