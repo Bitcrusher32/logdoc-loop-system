@@ -2,6 +2,8 @@
 
 A human-in-the-loop AI-assisted engineering protocol. This is a minimum viable LogDoc template that preserves both usability and systemic rigor. It avoids maximalist friction and the need for customization present in the maximal LogDoc template.
 
+Adherence to proper logdoc hygine, update cadence, and systems fundimentals will produce significantly higher quality LogDocs than more verbose LogDocs.
+
 ---
 
 # [Project Name] LogDoc v[MAJOR].[MINOR]
