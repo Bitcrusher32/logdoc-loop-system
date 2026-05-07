@@ -165,13 +165,13 @@ Instructions for a future assistant or future session.
 
 This section should include:
 
-what not to assume
-what not to repeat
-known traps
-preferred working style
-next commands
-important files
-active constraints
+- what not to assume
+- what not to repeat
+- known traps
+- preferred working style
+- next commands
+- important files
+- active constraints
 
 ---
 
@@ -440,13 +440,13 @@ The raw LogDoc may contain private paths, secrets, device details, passwords, or
 ## 13. Minimal compliance
 A minimal LogDoc Loop project should have filled sections for the:
 
-active goal
-definitive knowns
-current state
-current blocker
-next safe action
-timeline
-breakpoints
+- active goal
+- definitive knowns
+- current state
+- current blocker
+- next safe action
+- timeline
+- breakpoints
 
 A full LogDoc Loop project should have all sections defined in this specification.
 
