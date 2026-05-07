@@ -293,7 +293,7 @@ The cadence is flexible. The purpose is continuity, not paperwork.
 
 
 ## 7. Classification of results
-Each major result should be classified.
+Each major result across all check, hygine, breakpint, and worklfow fields should be classified.
 Recommended classifications:
 
  - VALIDATED
