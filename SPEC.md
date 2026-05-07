@@ -5,7 +5,6 @@ Version: 0.1
 
 
 ## 1. Definition
-
 **LogDoc Loop** is a human-in-the-loop AI-assisted engineering protocol for maintaining a living operational context document during complex technical work.
 
 A **LogDoc** is the document.
@@ -23,7 +22,6 @@ The purpose of the protocol is to keep technical work reproducible, restartable,
 ---
 
 ## 2. Design goals
-
 LogDoc Loop is designed to support:
 
 - long-running technical iteration
@@ -41,7 +39,6 @@ LogDoc Loop is designed to support:
 
 
 ## 3. Non-goals
-
 LogDoc Loop is not designed to be:
 
 - a full project management system
@@ -59,7 +56,6 @@ A LogDoc may feed into these systems, but it does not replace them.
 ---
 
 ## 4. Required concepts
-
 
 ### 4.1 LogDoc
 A living operational context document for a technical project.
@@ -126,7 +122,6 @@ Crossing a risk boundary should require a breakpoint or explicit validation step
 
 
 ### 4.7 Validation Ladder
-
 A staged proof sequence.
 
 Instead of jumping from “it compiled once” to “it works,” a validation ladder defines progressive evidence.
@@ -144,7 +139,6 @@ Example:
 
 
 ### 4.8 Breakpoint
-
 A stable handoff snapshot.
 
 A breakpoint records enough context for the project to be safely resumed later.
@@ -154,7 +148,6 @@ Breakpoints are mandatory before high-risk transitions and strongly recommended 
 
 
 ### 4.9 Current State
-
 The latest accurate summary of the project.
 
 Current State should separate:
@@ -168,7 +161,6 @@ next actions
 
 
 ### 4.10 Assistant Notes
-
 Instructions for a future assistant or future session.
 
 This section should include:
