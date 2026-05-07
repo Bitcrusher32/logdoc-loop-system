@@ -206,7 +206,7 @@ Avoid using LogDoc (if not specifically retooled) for:
  - Purely agentic, not human-in-loop iteration workflows
  
 ---
-##Current standard status:
+## Current standard status:
 
 LogDoc Loop v0.1
 
@@ -221,3 +221,8 @@ checklists
 automation helpers
 versioned compliance levels
 publication guidance
+
+---
+
+License: MIT.
+See the repo's LICENSE file for more information.
