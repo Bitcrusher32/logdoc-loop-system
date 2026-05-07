@@ -195,7 +195,6 @@ Future versions may add reusable templates, examples, scripts, or project-specif
  - system administration
  - experimental builds
  - risky migrations
- - Status
 
 Avoid using LogDoc (if not specifically retooled) for:
 
