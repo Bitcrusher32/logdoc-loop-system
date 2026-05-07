@@ -212,13 +212,13 @@ This is an early public specification based on a successful real-world case stud
 
 Future work may include:
 
-compact templates
-project-type-specific templates
-examples
-checklists
-automation helpers
-versioned compliance levels
-publication guidance
+- compact templates
+- project-type-specific templates
+- examples
+- checklists
+- automation helpers
+- versioned compliance levels
+- publication guidance
 
 ---
 
