@@ -162,8 +162,6 @@ The human remains responsible for deciding what to run, what to trust, what to p
 README.md
 SPEC.md
 LOGDOC_TEMPLATE.md
-BREAKPOINTS.md
-CASE_STUDY.md
 LICENSE
 
 Future versions may add reusable templates, examples, scripts, or project-specific variants.
