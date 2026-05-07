@@ -1,4 +1,3 @@
-
 ## LOGDOC_TEMPLATE.md
 # [Project Name] LogDoc
 
@@ -255,3 +254,95 @@ Action:
 Command / change:
 
 ```bash
+
+Result:
+- 
+
+Interpretation:
+- 
+
+Next action:
+- 
+
+Classification:
+- VALIDATED / PARTIAL / FAILED / BLOCKED / DEFERRED / UNSAFE / UNKNOWN / SUPERSEDED
+
+8. Error Signatures / Failure Patterns
+Error 1
+
+Observed error:
+
+Where it occurred:
+
+Cause / suspected cause:
+
+Fix / attempted fix:
+
+Status:
+
+9. Patch / Change Timeline
+10. Milestone Timeline
+Milestone 1: [Name]
+
+Date:
+
+Status:
+
+Evidence:
+
+Caveats:
+
+Next milestone:
+
+11. Artifacts
+11.1 Generated Artifacts
+11.2 Preserved Artifacts
+11.3 Disposable Artifacts
+11.4 Public Artifacts
+11.5 Private Artifacts
+12. Commands
+12.1 Known-Good Commands
+12.2 Diagnostic Commands
+12.3 Dangerous Commands
+
+Do not run casually:
+
+Reason:
+
+13. Breakpoints
+Breakpoint YYYY-MM-DD HH:MM — [Label]
+
+Current state:
+
+Validated:
+
+Not validated:
+
+Known risks:
+
+Important artifacts:
+
+Important commands:
+
+Next safest action:
+
+Do not do next:
+
+Safe to pause here:
+
+Yes / No
+14. Notes for Future Assistant / Future Operator
+
+Do not skip:
+
+Do not assume:
+
+Known traps:
+
+Preferred working style:
+
+Important files:
+
+Important context:
+
+Next command to consider:
