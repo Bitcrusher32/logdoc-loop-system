@@ -2,7 +2,7 @@
 
 A human-in-the-loop AI-assisted engineering protocol. This is a LogDoc template designed to cover all bases, to be customized before use. Using as-is may create increased documentation verbosity at the expense of bureaucratic friction.
 
-Before using this template, delete or modify any sections your project does not need. This LogDoc template is not more rigorous than the minimal LogDoc. It is just more verbose. Adherence to proper logdoc hygine, update cadence, and systems fundimentals will produce significantly higher quality LogDocs than more verbose LogDocs.
+Before using this template, delete or modify any sections your project does not need. This LogDoc template is not more rigorous than the minimal LogDoc. It is just more verbose. Adherence to proper LogDoc hygiene, update cadence, and systems fundamentals will produce significantly higher quality LogDocs than excessively verbose LogDocs.
 
 ---
 # [Project Name] LogDoc [Version]
