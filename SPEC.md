@@ -1,4 +1,3 @@
-
 # LogDoc Loop System Specification
 Version: 0.1
  
@@ -40,6 +39,7 @@ LogDoc Loop is designed to support:
 
 ---
 
+
 ## 3. Non-goals
 
 LogDoc Loop is not designed to be:
@@ -60,67 +60,66 @@ A LogDoc may feed into these systems, but it does not replace them.
 
 ## 4. Required concepts
 
-### 4.1 LogDoc
 
+### 4.1 LogDoc
 A living operational context document for a technical project.
 
 It records what is known, what has changed, what has been validated, what remains risky, and what should happen next.
 
-### 4.2 Loop
 
+### 4.2 Loop
 The repeated cycle of:
 
 Attempt → Observe → Interpret → Record → Decide Next Step
 The loop should continue until the project reaches a breakpoint, milestone, abandonment point, or publication state.
 
-### 4.3 Definitive Known
 
+### 4.3 Definitive Known
 A fact that should be treated as stable until contradicted.
 
 Examples:
 
-operating system version
-target architecture
-installed tool path
-validated command
-current repo branch
-confirmed dependency version
-known device state
-known unsafe action
+ - operating system version
+ - target architecture
+ - installed tool path
+ - validated command
+ - current repo branch
+ - confirmed dependency version
+ - known device state
+ - known unsafe action
 
-Definitive knowns should be explicit, not implied.
+Definitive knowns should be explicit, not implied, and should be project-context dependant.
+
 
 ### 4.4 Scope
-
 The current active work.
 
 Scope should answer:
 
-What are we doing now?
-What are we not doing now?
-What counts as success?
-What is intentionally deferred?
+ - What are we doing now?
+ - What are we not doing now?
+ - What counts as success?
+ - What is intentionally deferred?
+
 
 
 ### 4.5 Non-Scope
-
 Work that may be historically related but is not allowed to drive the current task.
-
 This prevents old project goals from contaminating the active plan.
 
-4.6 Risk Boundary
 
+### 4.6 Risk Boundary
 A point where the cost of being wrong increases.
 
 Examples:
 
-moving from host-side tests to device installs
-deleting generated files
-restoring a device
-publishing compatibility claims
-running destructive commands
-touching production data
-changing security-sensitive configuration
+ - moving from host-side tests to device installs
+ - deleting generated files
+ - restoring a device
+ - publishing compatibility claims
+ - running destructive commands
+ - touching production data
+ - changing security-sensitive configuration
 
 Crossing a risk boundary should require a breakpoint or explicit validation step.
 
@@ -182,13 +181,13 @@ next commands
 important files
 active constraints
 
+---
 
 ## 5. Required LogDoc sections
-
 A full LogDoc should contain these sections.
 
-### 5.1 Header
 
+### 5.1 Header
 Must include:
 
  - project name
@@ -198,8 +197,7 @@ Must include:
  - current version/checkpoint
 
 
-###5.2 Project Goal
-
+### 5.2 Project Goal
 Must include:
 
  - active goal
@@ -208,8 +206,7 @@ Must include:
  - failure criteria
 
 
-###5.3 Definitive Knowns
-
+### 5.3 Definitive Knowns
 Must include the stable facts required to avoid repeated rediscovery.
 
 Recommended subsections:
@@ -221,8 +218,7 @@ Recommended subsections:
  - dependency state
 
 
-###5.4 Current State
-
+### 5.4 Current State
 Must separate:
 
  - validated
@@ -232,8 +228,7 @@ Must separate:
  - deferred
 
 
-###5.5 Risk Model
-
+### 5.5 Risk Model
 Must include:
 
  - high-risk actions
@@ -242,8 +237,7 @@ Must include:
  - preservation notes
 
 
-###5.6 Current Plan
-
+### 5.6 Current Plan
 Must include:
 
  - current phase
@@ -254,7 +248,6 @@ Must include:
 
 
 ### 5.7 Iteration Notes
-
 Must record meaningful attempts.
 
 Each entry should include:
@@ -268,29 +261,27 @@ Each entry should include:
 
 
 ### 5.8 Timeline
-
 Must summarize major events and milestones in order, covering events in series with minimal discontinuity.
 The timeline should avoid excessive raw logs. It should compress the project history into useful operational memory.
 
 
-###5.9 Validation Ladder
-
+### 5.9 Validation Ladder
 Must define the staged validation path.
 The ladder should prevent overclaiming.
 
 
-###5.10 Breakpoints
-
+### 5.10 Breakpoints
 Must preserve handoff snapshots, with a LogDoc versioning update (v1.12 -> v1.13)
 Should occur while the project is at a neutral state, or at a milestone achivement 
 
 
-###5.11 Notes for Future Assistant / Future Operator
+### 5.11 Notes for Future Assistant / Future Operator
 Must include context restoration instructions and the project's last-state and last-neutral working state dependant information.
 
 
-##6. Update cadence
+---
 
+## 6. Update cadence
 During active technical iteration, update the LogDoc every 5–15 minutes or after any meaningful state change.
 
 Meaningful state changes include:
@@ -309,8 +300,7 @@ Meaningful state changes include:
 The cadence is flexible. The purpose is continuity, not paperwork.
 
 
-##7. Classification of results
-
+## 7. Classification of results
 Each major result should be classified.
 Recommended classifications:
 
@@ -324,8 +314,7 @@ Recommended classifications:
  - SUPERSEDED
  - VALIDATED
 
-###7.1 Classification definitions
-
+### 7.1 Classification definitions
 The result has been tested enough to rely on for the current phase.
 
 PARTIAL
@@ -356,8 +345,10 @@ SUPERSEDED
 
 > The result was once relevant but has been replaced by newer information.
 
-8. Breakpoint requirements
 
+---
+
+## 8. Breakpoint requirements
 A breakpoint within the timeline should include (immediately proceeding current timeline information):
 
 Breakpoint label, LogDoc version:
@@ -375,71 +366,79 @@ Safe to pause here:
 Breakpoints should be concise but complete.
 
 
-9. Validation language, informal schema suggestions
+---
 
+## 9. Validation language, informal schema suggestions
 LogDocs should avoid overclaiming.
 
 Use precise language:
 
 Preferred:
 
->Host-side package generation is validated.
-Device-side runtime behavior is not validated.
-The current no-op package proves packaging mechanics only.
-The compatibility scope is limited to the tested target.<
+>- Host-side package generation is validated.
+- Device-side runtime behavior is not validated.
+- The current no-op package proves packaging mechanics only.
+- The compatibility scope is limited to the tested target.<
 
 Avoid:
 
-It works.
-Fully supported.
-Production ready.
-Compatible with everything.
-Safe.
-Done.
+>- It works.
+- Fully supported.
+- Production ready.
+- Compatible with everything.
+- Safe.
+- Done.<
 
 Unless those claims are actually proven.
 
-10. Safety rules
 
+---
+
+## 10. Safety rules
 When a project includes fragile devices, production systems, user data, or irreversible operations, the LogDoc must explicitly separate:
 
-safe host-side actions
-risky target-side actions
-destructive operations
-recovery paths
-actions that must not be taken casually
+ - safe host-side actions
+ - risky target-side actions
+ - destructive operations
+ - recovery paths
+ - actions that must not be taken casually
 
 High-risk actions should not be hidden inside general task lists.
 
-11. Source control relationship
 
+---
+
+## 11. Source control relationship
 A LogDoc is not a replacement for Git.
 
-Recommended relationship:
-
+### Recommended relationship:
 Git records exact source changes.
 The LogDoc records why changes happened, what was tried, what failed, and what is safe to do next.
 README files describe the final public state.
 The LogDoc preserves the working process and handoff state.
 
-For public projects, the LogDoc may be trimmed, redacted, summarized, or split into a case study.
+For public projects, the LogDoc may be trimmed, redacted, summarized, or split into an attached operations log.
 
-12. Publication model
 
+---
+
+## 12. Publication model
 A project developed with LogDoc Loop may publish:
 
-the final README
-the reproducibility guide
-selected LogDoc excerpts
-a milestone map
-a case study
-a redacted full LogDoc
+ - the final README
+ - the reproducibility guide
+ - selected LogDoc excerpts
+ - a milestone map
+ - a case study
+ - a redacted full LogDoc
 
-The raw LogDoc may contain private paths, secrets, device details, passwords, or unsafe commands. It should be reviewed before publication.
+The raw LogDoc may contain private paths, secrets, device details, passwords, or unsafe commands. It should be reviewed and sanitized before publication.
 
-13. Minimal compliance
 
-A minimal LogDoc Loop project should have:
+---
+
+## 13. Minimal compliance
+A minimal LogDoc Loop project should have filled sections for the:
 
 active goal
 definitive knowns
@@ -451,20 +450,19 @@ breakpoints
 
 A full LogDoc Loop project should have all sections defined in this specification.
 
-14. Philosophy
 
+---
+## 14. Philosophy
 LogDoc Loop does not replace engineering judgment.
 
 It is a compression and continuity layer for human-led technical work.
 
 The human remains responsible for deciding:
 
-what to run
-what to trust
-what to publish
-what to delete
-what to install
-what to claim
-what risks are acceptable
-
-The protocol exists to make that judgment easier to preserve across time.
+ - what to run
+ - what to trust
+ - what to publish
+ - what to delete
+ - what to install
+ - what to claim
+ - what risks are acceptable
