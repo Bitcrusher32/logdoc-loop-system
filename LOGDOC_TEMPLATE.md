@@ -259,7 +259,7 @@ Reason:
 
 ---
 
-## 13. Breakpoints Timeline
+## 13. Breakpoint Timeline
 Breakpoint YYYY-MM-DD HH:MM — [Label] [Version]
 
 Current state:
