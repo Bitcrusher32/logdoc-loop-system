@@ -1,4 +1,3 @@
-## LOGDOC_TEMPLATE.md
 # [Project Name] LogDoc [Version]
 
 Last updated: YYYY-MM-DD HH:MM  
@@ -205,7 +204,7 @@ Classification: [VALIDATED / PARTIAL / FAILED / BLOCKED / DEFERRED / UNSAFE / UN
 ---
 
 ## 8. Error Signatures / Failure Patterns
-Error 1
+### Error 1
 Observed error:
 
 Where it occurred:
@@ -223,13 +222,11 @@ Status:
 
 
 ## 10. Milestone Timeline
-Milestone 1: [Name]
+### Milestone 1: [Name]
 Date:
 Status:
 Evidence:
-
 Caveats:
-
 Next milestone(s):
 
 ---
@@ -260,7 +257,7 @@ Reason:
 ---
 
 ## 13. Breakpoint Timeline
-Breakpoint YYYY-MM-DD HH:MM — [Label] [Version]
+### Breakpoint YYYY-MM-DD HH:MM — [Label] [Version]
 
 Current state:
 
