@@ -157,6 +157,7 @@ Use these precisely. Do not inflate.
 | **UNSAFE** | Carries unacceptable risk for the current phase. |
 | **UNKNOWN** | Not yet understood or lacks context. |
 | **SUPERSEDED** | Was relevant but replaced by newer information. |
+| **NOT VALIDATED** | Not yet tested; no claim should rely on it. |
 
 ---
 
