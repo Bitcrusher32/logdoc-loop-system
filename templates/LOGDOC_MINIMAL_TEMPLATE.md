@@ -178,7 +178,8 @@ Major events in order. Compress history into operational memory.
 
 ---
 
-## 10. Breakpoint: YYYY-MM-DD HH:MM — [Label] v[X.Y]
+## 10. Breakpoints
+### Breakpoint: YYYY-MM-DD HH:MM — [Label] v[X.Y]
 
 Insert at stable handoff points: end of day, before risk boundaries, before publishing, before device work.
 
