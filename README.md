@@ -3,11 +3,9 @@
 ## Condesed Overview
 LogDoc Loop is a human-in-the-loop engineering protocol for keeping long technical projects reproducible, restartable, and auditable across AI sessions, context resets, and fragile debugging work. Built from the WSL Theros Toolkit recovery process, it turns scattered iteration into a structured project memory layer with known states, validation results, risk boundaries, breakpoints, and next safe actions.
 
-![Status](https://img.shields.io/badge/status-documented-blue)
 ![Type](https://img.shields.io/badge/type-engineering%20protocol-informational)
-![Focus](https://img.shields.io/badge/focus-reproducibility-success)
 ![Use Case](https://img.shields.io/badge/use%20case-AI%20workflow-purple)
-![Maturity](https://img.shields.io/badge/maturity-case%20study-orange)
+![Maturity](https://img.shields.io/badge/maturity-case%20protocol-informational)
 
 ## Introduction
 **LogDoc Loop** is a human-in-the-loop AI-assisted engineering protocol for keeping long-running technical work reproducible, restartable, and auditable.
