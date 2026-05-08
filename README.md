@@ -5,7 +5,7 @@ LogDoc Loop is a human-in-the-loop engineering protocol for keeping long technic
 
 ![Type](https://img.shields.io/badge/type-engineering%20protocol-informational)
 ![Use Case](https://img.shields.io/badge/use%20case-AI%20workflow-purple)
-![Maturity](https://img.shields.io/badge/maturity-case%20protocol-informational)
+![Maturity](https://img.shields.io/badge/maturity-case%20study-informational)
 
 ## Introduction
 **LogDoc Loop** is a human-in-the-loop AI-assisted engineering protocol for keeping long-running technical work reproducible, restartable, and auditable.
