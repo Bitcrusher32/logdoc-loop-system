@@ -301,3 +301,18 @@ Important files:
 Important context:
 
 Next command to consider:
+
+---
+
+## Appendix A: Versioning Schema
+
+Use `v[MAJOR].[MINOR]` where:
+
+- **MAJOR** = project scope / identity change
+- **MINOR** = timeline continuity within that scope
+
+Examples:
+
+- v1.21 = scope 1, timeline entry 21
+- v2.00 = scope 2, reset minor
+- v2.23 = same scope 2, timeline entry 23
