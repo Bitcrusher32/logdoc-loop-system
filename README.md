@@ -1,6 +1,5 @@
 # LogDoc Loop
 
-=======
 ## Condesed Overview
 
 LogDoc Loop is a human-in-the-loop engineering protocol for keeping long technical projects reproducible, restartable, and auditable across AI sessions, context resets, and fragile debugging work. Built from the WSL Theros Toolkit recovery process, it turns scattered iteration into a structured project memory layer with known states, validation results, risk boundaries, breakpoints, and next safe actions.
