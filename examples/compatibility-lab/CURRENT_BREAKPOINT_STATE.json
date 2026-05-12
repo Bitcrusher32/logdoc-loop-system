@@ -1,0 +1,103 @@
+{
+  "schema_version": "logdoc-state/v0.1",
+  "project": {
+    "name": "example-compatibility-lab-lane",
+    "repo": "compat-lab/example-lane",
+    "owner": "compat-lab",
+    "logdoc_version": "v0.1",
+    "phase": "workflow validation",
+    "last_updated": "2026-05-11T00:00:00-04:00"
+  },
+  "mission": {
+    "active_goal": "Track the current validated state of one hardware/software compatibility lane.",
+    "non_goals": [
+      "Do not claim support outside the tested hardware/software matrix.",
+      "Do not treat a single successful run as production stability."
+    ],
+    "success_criteria": [
+      "Tested workflow is reproducible from documented commands.",
+      "Blockers and unsafe claims are explicit.",
+      "Next validation step is clear."
+    ],
+    "failure_criteria": [
+      "Workflow cannot be reproduced.",
+      "Failure mode cannot be isolated."
+    ]
+  },
+  "current_state": {
+    "status": "active",
+    "safe_to_pause": true,
+    "current_blocker": "Example blocker: batch path instability above the tested context size.",
+    "next_safest_action": "Reproduce the failure with the smallest documented command and attach logs to the LogDoc.",
+    "do_not_do_next": "Do not advertise general backend stability or production serving readiness."
+  },
+  "validated": [
+    "Single-user prompt path runs in the tested local configuration."
+  ],
+  "partially_validated": [
+    "Longer context and batch behavior show progress but are not stable."
+  ],
+  "not_validated": [
+    "Production serving.",
+    "All model quantizations.",
+    "All operating systems.",
+    "All driver/runtime versions."
+  ],
+  "blocked": [
+    {
+      "id": "batch-instability",
+      "severity": "medium",
+      "summary": "Batch serving behavior is unstable in the current lane.",
+      "status": "active"
+    }
+  ],
+  "deferred": [
+    "Dashboard generation across multiple lanes."
+  ],
+  "risk_boundaries": [
+    "Do not generalize beyond the exact tested hardware/software/model matrix.",
+    "Do not publish performance comparisons without repeatable benchmark conditions."
+  ],
+  "important_artifacts": [
+    "test logs",
+    "driver/runtime version output"
+  ],
+  "important_paths": [
+    "LOGDOC.md",
+    "CURRENT_BREAKPOINT_STATE.json",
+    "logs/"
+  ],
+  "known_good_commands": [
+    "python tools/validate-state-json.py CURRENT_BREAKPOINT_STATE.json"
+  ],
+  "diagnostic_commands": [
+    "git status",
+    "python tools/validate-state-json.py CURRENT_BREAKPOINT_STATE.json"
+  ],
+  "dangerous_commands": [],
+  "open_blockers": [
+    {
+      "id": "batch-instability",
+      "severity": "medium",
+      "summary": "Batch serving path is not validated as stable.",
+      "status": "active"
+    }
+  ],
+  "next_session_bootstrap": {
+    "read_first": [
+      "CURRENT_BREAKPOINT_STATE.json",
+      "latest LogDoc breakpoint",
+      "latest test log"
+    ],
+    "first_command_to_consider": "python tools/validate-state-json.py CURRENT_BREAKPOINT_STATE.json",
+    "do_not_start_with": "Do not begin with broad benchmark/public claims."
+  },
+  "allowed_claims": [
+    "The tested single-user workflow works for the documented lane."
+  ],
+  "not_allowed_claims": [
+    "The backend is production stable.",
+    "All models and quantizations are supported.",
+    "The result applies to untested hardware or driver versions."
+  ]
+}

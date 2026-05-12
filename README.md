@@ -62,7 +62,9 @@ A LogDoc captures:
 
 The LogDoc becomes the operational memory of the project.
 
+
 ---
+
 
 ## The loop
 
@@ -126,6 +128,30 @@ A good breakpoint answers:
 - What is the next safest action?
 - What should not be done next?
 - Is the system safe to pause here?
+
+---
+
+## LogDoc V1 and V2
+
+LogDoc Loop has two intended usage versions.
+
+### LogDoc v1
+
+LogDoc v1 is a lean, Markdown-only workflow. It is suited to solo developers, personal projects, and human-in-loop AI-assisted iteration where a structured LogDoc is enough.
+
+### LogDoc v2
+
+LogDoc v2 preserves the human-readable LogDoc system, but adds enhanced handoff state definitions through a structured, machine-readable `CURRENT_BREAKPOINT_STATE.json` file.
+
+The working split is:
+- Markdown LogDoc for working sessions.
+- JSON State file for post-breakpoint handoff.
+- Git for history preservation.
+- README/docs for public claims.
+
+`CURRENT_BREAKPOINT_STATE.json` is derived from the latest LogDoc breakpoint. It records the current validated state, partial state, not-validated state, blockers, risk boundaries, important commands, allowed claims, not-allowed claims, and next safest action.
+
+A LogDoc v2 session is not closed until the latest LogDoc breakpoint and `CURRENT_BREAKPOINT_STATE.json` agree.
 
 ---
 

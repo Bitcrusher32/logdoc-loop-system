@@ -1,7 +1,5 @@
 # LogDoc Loop System Specification
 Version: 0.1
- 
-
 
 
 ## 1. Definition
@@ -146,7 +144,6 @@ A breakpoint records enough context for the project to be safely resumed later.
 Breakpoints are mandatory before high-risk transitions and strongly recommended before stopping work.
 
 
-
 ### 4.9 Current State
 The latest accurate summary of the project.
 
@@ -172,6 +169,44 @@ This section should include:
 - next commands
 - important files
 - active constraints
+
+### 4.12 Current Breakpoint State
+
+LogDoc V2 introduces an optional machine-readable state file: `CURRENT_BREAKPOINT_STATE.json`.
+
+The Current Breakpoint State is a compact continuity packet derived from the latest LogDoc breakpoint.
+
+It is not an independent competing source of truth. The human-readable LogDoc remains the narrative and decision record. The JSON file exposes the latest safe state in a format that humans, assistants, scripts, dashboards, and team workflows can consume quickly.
+
+A session cannot be closed until:
+
+1. The latest LogDoc breakpoint is written.
+2. `CURRENT_BREAKPOINT_STATE.json` is updated from that breakpoint.
+3. The JSON validates against the project schema.
+4. `next_safest_action` is explicit.
+5. `do_not_do_next` is explicit.
+6. Validated, partially validated, not validated, blocked, and deferred state are current.
+7. Allowed and not-allowed claims are current.
+
+The Current Breakpoint State should include:
+
+- project metadata
+- active mission
+- current status
+- validated state
+- partially validated state
+- not validated state
+- blocked/deferred state
+- risk boundaries
+- important paths and artifacts
+- known-good commands
+- diagnostic commands
+- dangerous commands
+- open blockers
+- next-session bootstrap instructions
+- allowed claims
+- not-allowed claims
+
 
 ---
 

@@ -1,0 +1,110 @@
+{
+  "schema_version": "logdoc-state/v0.1",
+  "project": {
+    "name": "theros-monumental-wsl-toolkit",
+    "repo": "git.bitcrusher32.win/bitcrusher32/theros-monumental-wsl-toolkit",
+    "owner": "Bitcrusher32",
+    "logdoc_version": "LogDocV2.29-sanitized",
+    "phase": "public appliance release / future validation lanes",
+    "last_updated": "2026-05-11T00:00:00-04:00"
+  },
+  "mission": {
+    "active_goal": "Preserve and validate a reproducible legacy iOS ARMv7 toolchain workflow on WSL/Linux while keeping public/private artifact boundaries clean.",
+    "non_goals": [
+      "Do not redistribute Apple SDKs.",
+      "Do not claim broad iOS compatibility.",
+      "Do not treat host-side stubs as runtime implementations.",
+      "Do not pursue behavior-changing tweak logic in this case-study state."
+    ],
+    "success_criteria": [
+      "Fresh build/install/verify path remains reproducible for the documented lane.",
+      "Host validation examples remain green.",
+      "Public/private appliance boundaries remain clean.",
+      "Allowed claims and not-allowed claims remain explicit."
+    ],
+    "failure_criteria": [
+      "Public artifacts leak private SDKs, generated packages, appliance tarballs, credentials, or unsafe local state.",
+      "The case study overclaims runtime/device behavior not validated by the LogDoc."
+    ]
+  },
+  "current_state": {
+    "status": "stable_checkpoint",
+    "safe_to_pause": true,
+    "current_blocker": null,
+    "next_safest_action": "Use the sanitized LogDoc and this state file as the v2 case study for Current Breakpoint State handoff behavior.",
+    "do_not_do_next": "Do not start device-risky tweak behavior or make broad compatibility claims from this case-study state."
+  },
+  "validated": [
+    "Legacy ARMv7 iOS toolchain build/install/verify workflow is documented for WSL Ubuntu 24.04.",
+    "Fresh reproducible toolchain build path is represented in the case study.",
+    "Theos wrapper setup and host validation lanes are represented in the case study.",
+    "Public sanitized toolchain-only appliance boundary is documented as separate from private SDK-bearing state."
+  ],
+  "partially_validated": [
+    "Host-side no-op tweak package mechanics are represented, but this does not prove arbitrary Objective-C/Foundation/Substrate linking correctness or runtime behavior."
+  ],
+  "not_validated": [
+    "Broad device/iOS/jailbreak compatibility beyond documented lanes.",
+    "Bundled full Theos/iPhoneOS SDK public appliance flow.",
+    "Arbitrary behavior-changing tweak safety.",
+    "Device-side install/uninstall/runtime safety unless explicitly validated in the current LogDoc."
+  ],
+  "blocked": [],
+  "deferred": [
+    "Further real Objective-C/Foundation/Substrate linking validation unless a safe linker/stub strategy is documented.",
+    "Additional device-side validation lanes unless explicitly scoped and risk-bounded."
+  ],
+  "risk_boundaries": [
+    "Do not publish private WSL appliance contents.",
+    "Do not commit generated packages, logs, SDKs, credentials, or appliance tarballs.",
+    "Do not overclaim compatibility outside the documented target matrix.",
+    "Do not treat temporary SDK/linker hacks as production validation.",
+    "Do not treat host-side package creation as proof of runtime/device behavior."
+  ],
+  "important_artifacts": [
+    "Sanitized LogDoc case study",
+    "Project scope notes",
+    "Sanitization notes"
+  ],
+  "important_paths": [
+    "case-studies/theros-monumental-wsl-toolkit/LogDocV2.29-sanitized.md",
+    "case-studies/theros-monumental-wsl-toolkit/PROJECT_SCOPE.md",
+    "case-studies/theros-monumental-wsl-toolkit/SANITIZATION_NOTES.md",
+    "case-studies/theros-monumental-wsl-toolkit/README.md"
+  ],
+  "known_good_commands": [
+    "python tools/validate-state-json.py case-studies/theros-monumental-wsl-toolkit/CURRENT_BREAKPOINT_STATE.json"
+  ],
+  "diagnostic_commands": [
+    "git status",
+    "git log --oneline --decorate --graph --all -20"
+  ],
+  "dangerous_commands": [],
+  "open_blockers": [
+    {
+      "id": "real-objc-foundation-linking",
+      "severity": "high",
+      "summary": "Old ld64 cannot consume .tbd SDK stubs; meaningful Objective-C/Foundation/Substrate linking requires real Mach-O stubs or an alternate safe linker strategy.",
+      "status": "deferred"
+    }
+  ],
+  "next_session_bootstrap": {
+    "read_first": [
+      "case-studies/theros-monumental-wsl-toolkit/CURRENT_BREAKPOINT_STATE.json",
+      "case-studies/theros-monumental-wsl-toolkit/README.md",
+      "latest breakpoint in case-studies/theros-monumental-wsl-toolkit/LogDocV2.29-sanitized.md"
+    ],
+    "first_command_to_consider": "python tools/validate-state-json.py case-studies/theros-monumental-wsl-toolkit/CURRENT_BREAKPOINT_STATE.json",
+    "do_not_start_with": "Do not start with device-risky tweak behavior or broad compatibility claims."
+  },
+  "allowed_claims": [
+    "The case study preserves a documented, risk-bounded LogDoc workflow for the described legacy iOS ARMv7 WSL toolchain lane.",
+    "The documented host-side build/verification path is represented as the validated project lane."
+  ],
+  "not_allowed_claims": [
+    "This supports all legacy iOS versions.",
+    "This is proven safe on-device for arbitrary tweaks.",
+    "Host-side package creation proves runtime/device behavior.",
+    "The public appliance includes Apple SDKs."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "logdoc-state/v0.1",
+  "project": {
+    "name": "",
+    "repo": "",
+    "owner": "",
+    "logdoc_version": "",
+    "phase": "",
+    "last_updated": "YYYY-MM-DDTHH:MM:SS±HH:MM"
+  },
+  "mission": {
+    "active_goal": "",
+    "non_goals": [],
+    "success_criteria": [],
+    "failure_criteria": []
+  },
+  "current_state": {
+    "status": "unknown",
+    "safe_to_pause": false,
+    "current_blocker": null,
+    "next_safest_action": "",
+    "do_not_do_next": ""
+  },
+  "validated": [],
+  "partially_validated": [],
+  "not_validated": [],
+  "blocked": [],
+  "deferred": [],
+  "risk_boundaries": [],
+  "important_artifacts": [],
+  "important_paths": [],
+  "known_good_commands": [],
+  "diagnostic_commands": [],
+  "dangerous_commands": [],
+  "open_blockers": [],
+  "next_session_bootstrap": {
+    "read_first": [
+      "CURRENT_BREAKPOINT_STATE.json",
+      "latest LogDoc breakpoint"
+    ],
+    "first_command_to_consider": "",
+    "do_not_start_with": ""
+  },
+  "allowed_claims": [],
+  "not_allowed_claims": []
+}

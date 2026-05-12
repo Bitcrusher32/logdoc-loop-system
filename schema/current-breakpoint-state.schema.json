@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/logdoc/current-breakpoint-state.schema.json",
+  "title": "LogDoc Current Breakpoint State",
+  "description": "Machine-readable restart packet derived from the latest LogDoc breakpoint. This file is not a replacement for the human-readable LogDoc.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "project",
+    "mission",
+    "current_state",
+    "validated",
+    "partially_validated",
+    "not_validated",
+    "blocked",
+    "deferred",
+    "risk_boundaries",
+    "important_artifacts",
+    "important_paths",
+    "known_good_commands",
+    "diagnostic_commands",
+    "dangerous_commands",
+    "open_blockers",
+    "next_session_bootstrap",
+    "allowed_claims",
+    "not_allowed_claims"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "logdoc-state/v0.1"
+    },
+    "project": {
+      "type": "object",
+      "required": ["name", "repo", "logdoc_version", "phase", "last_updated"],
+      "additionalProperties": true,
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "repo": {"type": "string"},
+        "owner": {"type": "string"},
+        "logdoc_version": {"type": "string"},
+        "phase": {"type": "string"},
+        "last_updated": {"type": "string"}
+      }
+    },
+    "mission": {
+      "type": "object",
+      "required": ["active_goal", "non_goals", "success_criteria"],
+      "additionalProperties": true,
+      "properties": {
+        "active_goal": {"type": "string", "minLength": 1},
+        "non_goals": {"type": "array", "items": {"type": "string"}},
+        "success_criteria": {"type": "array", "items": {"type": "string"}},
+        "failure_criteria": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "current_state": {
+      "type": "object",
+      "required": ["status", "safe_to_pause", "next_safest_action", "do_not_do_next"],
+      "additionalProperties": true,
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["unknown", "active", "stable_checkpoint", "blocked", "unsafe", "complete", "paused"]
+        },
+        "safe_to_pause": {"type": "boolean"},
+        "current_blocker": {"type": ["string", "null"]},
+        "next_safest_action": {"type": "string", "minLength": 1},
+        "do_not_do_next": {"type": "string", "minLength": 1}
+      }
+    },
+    "validated": {"type": "array", "items": {"type": "string"}},
+    "partially_validated": {"type": "array", "items": {"type": "string"}},
+    "not_validated": {"type": "array", "items": {"type": "string"}},
+    "blocked": {"type": "array"},
+    "deferred": {"type": "array"},
+    "risk_boundaries": {"type": "array", "items": {"type": "string"}},
+    "important_artifacts": {"type": "array"},
+    "important_paths": {"type": "array", "items": {"type": "string"}},
+    "known_good_commands": {"type": "array", "items": {"type": "string"}},
+    "diagnostic_commands": {"type": "array", "items": {"type": "string"}},
+    "dangerous_commands": {"type": "array", "items": {"type": "string"}},
+    "open_blockers": {"type": "array"},
+    "next_session_bootstrap": {
+      "type": "object",
+      "required": ["read_first", "first_command_to_consider", "do_not_start_with"],
+      "additionalProperties": true,
+      "properties": {
+        "read_first": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "first_command_to_consider": {"type": "string"},
+        "do_not_start_with": {"type": "string", "minLength": 1}
+      }
+    },
+    "allowed_claims": {"type": "array", "items": {"type": "string"}},
+    "not_allowed_claims": {"type": "array", "items": {"type": "string"}}
+  }
+}

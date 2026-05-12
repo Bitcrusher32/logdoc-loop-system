@@ -1,0 +1,83 @@
+{
+  "schema_version": "logdoc-state/v0.1",
+  "project": {
+    "name": "example-basic-project",
+    "repo": "example/repo",
+    "owner": "example-operator",
+    "logdoc_version": "v1.0",
+    "phase": "initial validation",
+    "last_updated": "2026-05-11T00:00:00-04:00"
+  },
+  "mission": {
+    "active_goal": "Validate the minimum project workflow before adding higher-risk features.",
+    "non_goals": [
+      "Do not claim production readiness.",
+      "Do not automate destructive actions."
+    ],
+    "success_criteria": [
+      "Baseline command runs successfully.",
+      "Known limitations are documented.",
+      "Next safe action is explicit."
+    ],
+    "failure_criteria": [
+      "Baseline command cannot be reproduced.",
+      "Current risks cannot be bounded."
+    ]
+  },
+  "current_state": {
+    "status": "stable_checkpoint",
+    "safe_to_pause": true,
+    "current_blocker": null,
+    "next_safest_action": "Run the baseline validation command on a clean checkout.",
+    "do_not_do_next": "Do not publish broad compatibility or production-readiness claims."
+  },
+  "validated": [
+    "Repository structure exists.",
+    "Minimal documentation exists."
+  ],
+  "partially_validated": [
+    "The workflow has been tested in one local environment only."
+  ],
+  "not_validated": [
+    "Fresh clone behavior.",
+    "Cross-platform behavior.",
+    "Production use."
+  ],
+  "blocked": [],
+  "deferred": [
+    "Automation and dashboard work."
+  ],
+  "risk_boundaries": [
+    "Do not run destructive commands without a fresh breakpoint.",
+    "Do not publish claims beyond the validated environment."
+  ],
+  "important_artifacts": [],
+  "important_paths": [
+    "LOGDOC.md",
+    "CURRENT_BREAKPOINT_STATE.json"
+  ],
+  "known_good_commands": [
+    "python tools/validate-state-json.py CURRENT_BREAKPOINT_STATE.json"
+  ],
+  "diagnostic_commands": [
+    "git status",
+    "git log --oneline --decorate --graph --all -20"
+  ],
+  "dangerous_commands": [],
+  "open_blockers": [],
+  "next_session_bootstrap": {
+    "read_first": [
+      "CURRENT_BREAKPOINT_STATE.json",
+      "latest LogDoc breakpoint"
+    ],
+    "first_command_to_consider": "python tools/validate-state-json.py CURRENT_BREAKPOINT_STATE.json",
+    "do_not_start_with": "Do not start with broad refactors or public claims."
+  },
+  "allowed_claims": [
+    "The current baseline has a documented restart state."
+  ],
+  "not_allowed_claims": [
+    "The project is production ready.",
+    "The workflow has been validated across all platforms."
+  ]
+}
